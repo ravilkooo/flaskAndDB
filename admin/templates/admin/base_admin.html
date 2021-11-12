@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="{{ url_for('.static', filename='css/styles.css')}}" rel="stylesheet" />
+    {%block title%}
+    {%if title %}
+        <title>Мой сайт - {{title}}</title>
+    {%else%}
+        <title>Мой сайт</title>
+    {%endif%}
+    {%endblock%}
+</head>
+<body>
+    {% if menu -%}
+    <ul class="mainmenu">
+        {%for m in menu%}
+        <li><a href="{{url_for(m.url)}}">{{m.title}}</a></li>
+        {% endfor %}
+    </ul>
+    <div class="clear"></div>
+    {%endif%}
+    <div class="content">
+    {%block content-%}
+    {%endblock%}
+    </div>
+</body>
+</html>

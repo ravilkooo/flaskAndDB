@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+{{ super() }}
+<p>Страница не найдена</p>
+<p>Вернуться на <a href="{{url_for('index')}}">главную страницу</a></p>
+{% endblock %}

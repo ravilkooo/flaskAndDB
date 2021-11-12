@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+	{{ super() }}
+	<p>{{ ctime(tm) }}</p>
+	<p>{{ text|safe }}</p>
+{% endblock %}
